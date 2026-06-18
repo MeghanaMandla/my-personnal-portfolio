@@ -219,6 +219,16 @@ section h2{
     text-align:center;
 }
 
+/* CODING & CONTACT ICONS */
+
+#coding i,
+#contact i{
+    color:#0ef;
+    font-size:22px;
+    margin-right:10px;
+    vertical-align:middle;
+}
+
 /* FOOTER */
 
 footer{
