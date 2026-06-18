@@ -1,4 +1,3 @@
-
 var typed = new Typed(".text", {
     strings: [
         "Computer Science Student",
@@ -37,6 +36,7 @@ counters.forEach(counter => {
 
 });
 
+
 /* CUSTOM CURSOR */
 
 const cursor = document.querySelector(".cursor");
@@ -44,4 +44,13 @@ const cursor = document.querySelector(".cursor");
 document.addEventListener("mousemove", (e) => {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
+});
+
+
+/* THEME TOGGLE */
+
+const toggle = document.getElementById("theme-toggle");
+
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
 });
