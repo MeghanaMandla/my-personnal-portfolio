@@ -8,22 +8,24 @@
 }
 
 body{
-    background:linear-gradient(-45deg,#081b29,#0f172a,#1e293b,#0ea5e9);
-    background-size:400% 400%;
-    animation:gradientBG 12s ease infinite;
     color:#ededed;
+    background-image:url("Purple Illustrated Mountain Desktop Wallpaper.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    min-height:100vh;
 }
 
-@keyframes gradientBG{
-    0%{
-        background-position:0% 50%;
-    }
-    50%{
-        background-position:100% 50%;
-    }
-    100%{
-        background-position:0% 50%;
-    }
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:-1;
 }
 
 .header{
@@ -151,11 +153,12 @@ section h2{
 #skills,
 #projects,
 #contact{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
     border-radius:20px;
     margin:40px 10%;
     padding:50px;
+    box-shadow:0 0 20px rgba(0,238,255,0.2);
 }
 
 #about p{
