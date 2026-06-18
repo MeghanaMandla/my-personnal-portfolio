@@ -1,235 +1,112 @@
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghana Mandla Portfolio</title>
+<!-- ADD THIS INSIDE THE HOME SECTION, AFTER <div class="home-content"> -->
 
-    <link rel="stylesheet" href="stylesheet.css">
+<img src="profile.jpg" alt="Meghana Mandla" class="profile-pic">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<h3>Hello, It's Me</h3>
 
-    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-</head>
+<h1>Meghana Mandla</h1>
 
-<body>
+<h3>And I'm a <span class="text"></span></h3>
 
-<header class="header">
+<p>
+Motivated final-year Computer Science student and DevOps Enthusiast
+with strong foundations in Python, SQL, Data Structures,
+Algorithms, Artificial Intelligence and Machine Learning.
+Passionate about solving real-world problems and building
+practical software applications.
+</p>
 
-    <a href="#" class="logo">Meghana Mandla</a>
+<div class="home-sci">
 
-    <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<a href="https://github.com/MeghanaMandla" target="_blank">
+<i class='bx bxl-github'></i>
+</a>
 
-</header>
+<a href="mailto:meghanamandla05@gmail.com">
+<i class='bx bx-envelope'></i>
+</a>
 
-<section class="home" id="home">
+<a href="#">
+<i class='bx bxl-linkedin'></i>
+</a>
 
-    <div class="home-content">
+</div>
 
-        <h3>Hello, It's Me</h3>
+<a href="#about" class="btn-box">More About Me</a>
 
-        <h1>Meghana Mandla</h1>
+<a href="resume.pdf" target="_blank" class="btn-box">
+Download Resume
+</a>
 
-        <h3>And I'm a <span class="text"></span></h3>
 
-        <p>
-            Motivated final-year Computer Science student and DevOps Enthusiast
-            with strong foundations in Python, SQL, Data Structures, Algorithms,
-            Artificial Intelligence and Machine Learning.
+<!-- ADD THIS AFTER THE LEADERSHIP SECTION -->
 
-            Passionate about solving real-world problems and building practical
-            software applications.
-        </p>
+<section id="coding">
 
-        <div class="home-sci">
+<h2>Coding Profiles</h2>
 
-            <a href="https://github.com/MeghanaMandla" target="_blank">
-                <i class='bx bxl-github'></i>
-            </a>
+<div class="card">
 
-            <a href="mailto:meghanamandla05@gmail.com">
-                <i class='bx bx-envelope'></i>
-            </a>
+<i class='bx bxl-github'></i>
 
-            <a href="#">
-                <i class='bx bxl-linkedin'></i>
-            </a>
+<h3>GitHub</h3>
 
-        </div>
+<p>
+Explore my development projects and source code.
+</p>
 
-        <a href="#about" class="btn-box">More About Me</a>
+<a href="https://github.com/MeghanaMandla"
+target="_blank"
+class="btn-box">
+Visit GitHub
+</a>
 
-    </div>
+</div>
 
 </section>
 
-<section id="about">
 
-    <h2>About Me</h2>
+<!-- ADD THIS BEFORE CONTACT SECTION -->
 
-    <p>
-        Motivated Computer Science student with strong programming skills and
-        knowledge of Data Structures and Algorithms.
+<section id="languages">
 
-        Interested in Artificial Intelligence, Machine Learning, DevOps,
-        Cloud Technologies and Software Development.
+<h2>Languages</h2>
 
-        I enjoy building innovative solutions and continuously learning
-        new technologies.
-    </p>
+<div class="card">
+<i class='bx bx-globe'></i>
+<h3>English</h3>
+</div>
 
-</section>
+<div class="card">
+<i class='bx bx-globe'></i>
+<h3>Telugu</h3>
+</div>
 
-<section id="skills">
-
-    <h2>Skills</h2>
-
-    <ul>
-        <li>Python</li>
-        <li>C Programming</li>
-        <li>SQL</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Git</li>
-        <li>Docker</li>
-        <li>Data Structures</li>
-        <li>Algorithms</li>
-        <li>Machine Learning</li>
-    </ul>
+<div class="card">
+<i class='bx bx-globe'></i>
+<h3>Hindi</h3>
+</div>
 
 </section>
 
-<section id="education">
 
-    <h2>Education</h2>
+<!-- REPLACE FACE EMOTION DETECTION PROJECT CARD -->
 
-    <div class="card">
-        <h3>B.Tech - Computer Science & Engineering</h3>
-        <p>Andhra Engineering College</p>
-        <p>2022 - 2026</p>
-    </div>
+<div class="card">
 
-    <div class="card">
-        <h3>Intermediate</h3>
-        <p>Pragathi Junior College</p>
-        <p>82%</p>
-    </div>
+<h3>Face Emotion Detection</h3>
 
-    <div class="card">
-        <h3>SSC</h3>
-        <p>ZPHS Nandipadu</p>
-        <p>CGPA: 10/10</p>
-    </div>
+<p>
+Real-time emotion recognition using Python,
+OpenCV and DeepFace.
+</p>
 
-</section>
+<a href="https://github.com/MeghanaMandla/face-expression-detection"
+target="_blank"
+class="btn-box">
+View Project
+</a>
 
-<section id="certifications">
-
-    <h2>Certifications</h2>
-
-    <ul>
-        <li>Artificial Intelligence & Machine Learning - APSSDC</li>
-        <li>Frontend Development Internship - CodeAlpha</li>
-        <li>Python Internship - Vaarada</li>
-        <li>SQL Certification</li>
-    </ul>
-
-</section>
-
-<section id="projects">
-
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>Face Emotion Detection</h3>
-        <p>
-            Real-time emotion recognition using Python, OpenCV and DeepFace.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Containerized Flask Web Application</h3>
-        <p>
-            Developed Flask application using Git and Docker.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Secure Persona Predictions and Data Leakage Prevention</h3>
-        <p>
-            Machine learning based secure prediction system with
-            privacy-focused architecture.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Student Management System</h3>
-        <p>
-            Database-driven application using MySQL supporting CRUD operations.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Online Quiz Application</h3>
-        <p>
-            Web-based quiz system with automatic score evaluation.
-        </p>
-    </div>
-
-</section>
-
-<section id="internships">
-
-    <h2>Internships</h2>
-
-    <div class="card">
-        <h3>Artificial Intelligence & Machine Learning Intern</h3>
-        <p>APSSDC | May 2024 - July 2024</p>
-    </div>
-
-    <div class="card">
-        <h3>Python Intern</h3>
-        <p>Geekster | June 2024 - July 2024</p>
-    </div>
-
-</section>
-
-<section id="leadership">
-
-    <h2>Leadership & Activities</h2>
-
-    <ul>
-        <li>Lady Representative</li>
-        <li>Project Team Lead</li>
-        <li>Attended Create Your Own AI Workshop</li>
-        <li>Participated in AI & AI Tools Webinars</li>
-    </ul>
-
-</section>
-
-<section id="contact">
-
-    <h2>Contact Me</h2>
-
-    <p><strong>Name:</strong> Meghana Mandla</p>
-
-    <p><strong>Email:</strong> meghanamandla05@gmail.com</p>
-
-    <p><strong>Location:</strong> Nellore, Andhra Pradesh - 524230</p>
-
-    <p><strong>Languages:</strong> English, Telugu, Hindi</p>
-
-</section>
-
-<script src="main.js"></script>
-
-</body>
-</html>
+</div>
 ```
