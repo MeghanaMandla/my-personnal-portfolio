@@ -1,7 +1,13 @@
 var typed = new Typed(".text", {
-    strings: ["Frontend Developer", "YouTuber", "Web Developer"],
+    strings: [
+        "Computer Science Student",
+        "Python Developer",
+        "DevOps Enthusiast",
+        "Machine Learning Enthusiast",
+        "Frontend Developer"
+    ],
     typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
+    backSpeed: 80,
+    backDelay: 1500,
     loop: true
 });
