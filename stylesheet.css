@@ -422,3 +422,27 @@ body{
 .prompt{
     width:80%;
 }
+/* THEME TOGGLE BUTTON */
+
+#theme-toggle{
+    background:#0ef;
+    color:#081b29;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#theme-toggle:hover{
+    box-shadow:0 0 20px #0ef;
+}
+
+/* LIGHT MODE */
+
+.light-mode{
+    background:#ffffff;
+    color:#081b29;
+}
