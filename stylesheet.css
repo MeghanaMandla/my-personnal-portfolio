@@ -336,8 +336,7 @@ footer{
 }
 
 /* CUSTOM CURSOR */
-
-*{
+body{
     cursor:none;
 }
 
@@ -372,12 +371,18 @@ footer{
     border-radius:20px;
     overflow:hidden;
 }
-
 .bar div{
     height:100%;
     background:#0ef;
     border-radius:20px;
     box-shadow:0 0 10px #0ef;
+    animation:fillBar 2s ease;
+}
+
+@keyframes fillBar{
+    from{
+        width:0;
+    }
 }
 
 /* SKILL PERCENTAGES */
