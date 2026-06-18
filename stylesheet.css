@@ -1,166 +1,221 @@
 ```css
-/* =========================
-   2026 PORTFOLIO UPGRADE
-========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
 
-/* Profile Image */
+body{
+    color:#ededed;
+    background:#081b29;
+}
+
+/* HEADER */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 10%;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    animation:slideRight 1s ease forwards;
+}
+
+.navbar a{
+    display:inline-block;
+    font-size:18px;
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#0ef;
+    text-shadow:0 0 15px #0ef;
+}
+
+/* HOME */
+
+.home{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("Purple Illustrated Mountain Desktop Wallpaper.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    padding:100px 10%;
+}
+
+.home-content{
+    max-width:800px;
+}
 
 .profile-pic{
-    width:240px;
-    height:240px;
+    width:220px;
+    height:220px;
     border-radius:50%;
     object-fit:cover;
     border:4px solid #0ef;
-    box-shadow:0 0 40px #0ef;
+    box-shadow:0 0 35px #0ef;
     margin-bottom:25px;
     animation:floatImage 5s ease-in-out infinite;
 }
 
-@keyframes floatImage{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-18px);}
-    100%{transform:translateY(0);}
+.home-content h3{
+    font-size:30px;
 }
-
-/* Glass Cards */
-
-.card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,0.15);
-    transition:0.5s;
-}
-
-.card:hover{
-    transform:translateY(-12px) scale(1.02);
-    box-shadow:0 0 35px rgba(0,238,255,.5);
-}
-
-/* Section Titles */
-
-section h2{
-    text-shadow:0 0 15px #0ef;
-    letter-spacing:2px;
-}
-
-/* Hero Text Glow */
 
 .home-content h1{
-    animation:glowText 3s ease-in-out infinite alternate;
+    font-size:60px;
+    margin:10px 0;
+    color:#fff;
+    text-shadow:0 0 25px #0ef;
 }
 
-@keyframes glowText{
-    from{
-        text-shadow:0 0 10px #0ef;
-    }
-    to{
-        text-shadow:
-        0 0 20px #0ef,
-        0 0 40px #0ef,
-        0 0 60px #0ef;
-    }
+.home-content p{
+    font-size:18px;
+    line-height:1.8;
+    margin-top:15px;
 }
 
-/* Skills Grid */
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
+.home-content span{
+    color:#0ef;
 }
 
-.skill-box{
-    background:rgba(255,255,255,.08);
-    border-radius:15px;
-    padding:25px;
-    text-align:center;
+.home-sci{
+    margin-top:25px;
+}
+
+.home-sci a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    border:2px solid #0ef;
+    border-radius:50%;
+    color:#0ef;
+    text-decoration:none;
+    font-size:22px;
+    margin:0 10px;
     transition:.5s;
 }
 
-.skill-box:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 20px #0ef;
+.home-sci a:hover{
+    background:#0ef;
+    color:#081b29;
+    box-shadow:0 0 25px #0ef;
 }
 
-.skill-box i{
+/* BUTTON */
+
+.btn-box{
+    display:inline-block;
+    padding:12px 28px;
+    background:#0ef;
+    color:#081b29;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    margin-top:20px;
+    margin-right:10px;
+    transition:.4s;
+}
+
+.btn-box:hover{
+    box-shadow:
+    0 0 5px cyan,
+    0 0 25px cyan,
+    0 0 50px cyan,
+    0 0 100px cyan;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 10%;
+}
+
+section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:40px;
+    text-shadow:0 0 15px #0ef;
+}
+
+/* CARDS */
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:25px;
+    margin:20px 0;
+    transition:.5s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(0,238,255,.4);
+}
+
+/* EDUCATION */
+
+.edu-logo{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 15px;
+}
+
+/* CODING */
+
+#coding{
+    text-align:center;
+}
+
+#coding i{
     font-size:50px;
     color:#0ef;
     margin-bottom:15px;
 }
 
-/* Timeline */
+/* CONTACT */
 
-.timeline{
-    position:relative;
-    max-width:900px;
-    margin:auto;
-}
-
-.timeline::after{
-    content:'';
-    position:absolute;
-    width:4px;
-    background:#0ef;
-    top:0;
-    bottom:0;
-    left:50%;
-}
-
-.timeline-item{
-    width:50%;
-    padding:20px;
-}
-
-/* Project Cards */
-
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.project-card{
-    overflow:hidden;
-}
-
-.project-card img{
-    width:100%;
-    border-radius:12px;
-}
-
-.project-card h3{
-    margin-top:15px;
-}
-
-/* Contact Cards */
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.contact-card{
+#contact .card{
     text-align:center;
-    padding:25px;
 }
 
-.contact-card i{
-    font-size:40px;
-    color:#0ef;
-}
-
-/* Buttons */
-
-.btn-box{
-    margin-right:12px;
-}
-
-.btn-box:hover{
-    transform:translateY(-4px);
-}
-
-/* Scrollbar */
+/* SCROLLBAR */
 
 ::-webkit-scrollbar{
     width:10px;
@@ -175,44 +230,64 @@ section h2{
     border-radius:10px;
 }
 
-/* Smooth Reveal */
+/* ANIMATIONS */
 
-.card,
-.skill-box{
-    animation:fadeUp 1s ease;
-}
-
-@keyframes fadeUp{
+@keyframes slideRight{
     from{
+        transform:translateX(-100px);
         opacity:0;
-        transform:translateY(30px);
     }
     to{
+        transform:translateX(0);
         opacity:1;
+    }
+}
+
+@keyframes floatImage{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
         transform:translateY(0);
     }
 }
 
-/* Mobile */
+/* MOBILE */
 
 @media(max-width:768px){
 
+    .header{
+        flex-direction:column;
+    }
+
+    .navbar{
+        margin-top:10px;
+        text-align:center;
+    }
+
+    .navbar a{
+        margin:8px;
+        font-size:16px;
+    }
+
     .profile-pic{
-        width:180px;
-        height:180px;
+        width:170px;
+        height:170px;
     }
 
     .home-content h1{
         font-size:42px;
     }
 
-    .timeline::after{
-        left:20px;
+    .home-content h3{
+        font-size:24px;
     }
 
-    .timeline-item{
-        width:100%;
-        padding-left:50px;
+    section{
+        padding:80px 5%;
     }
 }
 ```
