@@ -1,336 +1,235 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghana Mandla | Portfolio</title>
+    <title>Meghana Mandla Portfolio</title>
 
-```
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="stylesheet.css">
 
-<style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        scroll-behavior:smooth;
-        font-family:Arial,sans-serif;
-    }
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    body{
-        background:linear-gradient(-45deg,#0f172a,#1e293b,#0ea5e9,#7e22ce);
-        background-size:400% 400%;
-        animation:bg 12s ease infinite;
-        color:white;
-    }
-
-    @keyframes bg{
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
-
-    header{
-        position:fixed;
-        top:0;
-        width:100%;
-        padding:20px 10%;
-        background:rgba(0,0,0,.3);
-        backdrop-filter:blur(10px);
-        display:flex;
-        justify-content:space-between;
-        z-index:1000;
-    }
-
-    .logo{
-        font-size:28px;
-        font-weight:bold;
-    }
-
-    nav a{
-        color:white;
-        text-decoration:none;
-        margin-left:20px;
-    }
-
-    section{
-        padding:100px 10%;
-    }
-
-    .home{
-        min-height:100vh;
-        display:flex;
-        align-items:center;
-    }
-
-    .home-content h1{
-        font-size:60px;
-    }
-
-    .home-content h3{
-        margin:15px 0;
-    }
-
-    .btn{
-        display:inline-block;
-        padding:12px 25px;
-        background:#00e5ff;
-        color:black;
-        text-decoration:none;
-        border-radius:30px;
-        margin-top:20px;
-        font-weight:bold;
-    }
-
-    .social{
-        margin-top:20px;
-    }
-
-    .social a{
-        color:white;
-        font-size:28px;
-        margin-right:15px;
-    }
-
-    h2{
-        text-align:center;
-        margin-bottom:40px;
-        font-size:40px;
-    }
-
-    .card{
-        background:rgba(255,255,255,.08);
-        backdrop-filter:blur(10px);
-        border-radius:20px;
-        padding:25px;
-        margin:20px 0;
-        transition:.4s;
-    }
-
-    .card:hover{
-        transform:translateY(-8px);
-    }
-
-    .skills-grid,
-    .projects-grid{
-        display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-        gap:20px;
-    }
-
-    .skill{
-        background:rgba(255,255,255,.08);
-        padding:20px;
-        border-radius:15px;
-        text-align:center;
-    }
-
-    footer{
-        text-align:center;
-        padding:30px;
-    }
-</style>
-```
-
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
+
 <body>
 
-<header>
-    <div class="logo">Meghana Mandla</div>
+<header class="header">
 
-```
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
-```
+    <a href="#" class="logo">Meghana Mandla</a>
+
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
 </header>
 
 <section class="home" id="home">
+
     <div class="home-content">
-        <h3>Hello, I'm</h3>
+
+        <h3>Hello, It's Me</h3>
+
         <h1>Meghana Mandla</h1>
-        <h3>Computer Science Student | DevOps Enthusiast</h3>
 
-```
-    <p>
-        Motivated final-year Computer Science student passionate about
-        Python Development, Artificial Intelligence, Machine Learning,
-        DevOps, Docker and Web Development.
-    </p>
+        <h3>And I'm a <span class="text"></span></h3>
 
-    <div class="social">
-        <a href="https://github.com/MeghanaMandla"><i class='bx bxl-github'></i></a>
-        <a href="#"><i class='bx bxl-linkedin'></i></a>
-        <a href="mailto:meghanamandla05@gmail.com"><i class='bx bx-envelope'></i></a>
+        <p>
+            Motivated final-year Computer Science student and DevOps Enthusiast
+            with strong foundations in Python, SQL, Data Structures, Algorithms,
+            Artificial Intelligence and Machine Learning.
+
+            Passionate about solving real-world problems and building practical
+            software applications.
+        </p>
+
+        <div class="home-sci">
+
+            <a href="https://github.com/MeghanaMandla" target="_blank">
+                <i class='bx bxl-github'></i>
+            </a>
+
+            <a href="mailto:meghanamandla05@gmail.com">
+                <i class='bx bx-envelope'></i>
+            </a>
+
+            <a href="#">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+
+        </div>
+
+        <a href="#about" class="btn-box">More About Me</a>
+
     </div>
-
-    <a href="#about" class="btn">More About Me</a>
-</div>
-```
 
 </section>
 
 <section id="about">
+
     <h2>About Me</h2>
 
-```
-<div class="card">
     <p>
-        Motivated Computer Science student with strong knowledge of
-        Programming, Data Structures and Algorithms.
-        Interested in Artificial Intelligence, Machine Learning,
-        Cloud Computing and DevOps technologies.
+        Motivated Computer Science student with strong programming skills and
+        knowledge of Data Structures and Algorithms.
+
+        Interested in Artificial Intelligence, Machine Learning, DevOps,
+        Cloud Technologies and Software Development.
+
+        I enjoy building innovative solutions and continuously learning
+        new technologies.
     </p>
-</div>
-```
-
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-
-```
-<div class="card">
-    <h3>B.Tech - Computer Science & Engineering</h3>
-    <p>Andhra Engineering College</p>
-    <p>2022 - 2026</p>
-</div>
-
-<div class="card">
-    <h3>Intermediate</h3>
-    <p>Pragathi Junior College</p>
-    <p>82%</p>
-</div>
-
-<div class="card">
-    <h3>SSC</h3>
-    <p>ZPHS Nandipadu</p>
-    <p>CGPA: 10/10</p>
-</div>
-```
 
 </section>
 
 <section id="skills">
+
     <h2>Skills</h2>
 
-```
-<div class="skills-grid">
-    <div class="skill">Python</div>
-    <div class="skill">C</div>
-    <div class="skill">SQL</div>
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">Docker</div>
-    <div class="skill">Git</div>
-    <div class="skill">Data Structures</div>
-    <div class="skill">Algorithms</div>
-</div>
-```
+    <ul>
+        <li>Python</li>
+        <li>C Programming</li>
+        <li>SQL</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git</li>
+        <li>Docker</li>
+        <li>Data Structures</li>
+        <li>Algorithms</li>
+        <li>Machine Learning</li>
+    </ul>
+
+</section>
+
+<section id="education">
+
+    <h2>Education</h2>
+
+    <div class="card">
+        <h3>B.Tech - Computer Science & Engineering</h3>
+        <p>Andhra Engineering College</p>
+        <p>2022 - 2026</p>
+    </div>
+
+    <div class="card">
+        <h3>Intermediate</h3>
+        <p>Pragathi Junior College</p>
+        <p>82%</p>
+    </div>
+
+    <div class="card">
+        <h3>SSC</h3>
+        <p>ZPHS Nandipadu</p>
+        <p>CGPA: 10/10</p>
+    </div>
+
+</section>
+
+<section id="certifications">
+
+    <h2>Certifications</h2>
+
+    <ul>
+        <li>Artificial Intelligence & Machine Learning - APSSDC</li>
+        <li>Frontend Development Internship - CodeAlpha</li>
+        <li>Python Internship - Vaarada</li>
+        <li>SQL Certification</li>
+    </ul>
 
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
 
-```
-<div class="projects-grid">
+    <h2>Projects</h2>
 
     <div class="card">
         <h3>Face Emotion Detection</h3>
         <p>
-            Real-time emotion detection system using Python,
-            OpenCV and DeepFace.
+            Real-time emotion recognition using Python, OpenCV and DeepFace.
         </p>
     </div>
 
     <div class="card">
         <h3>Containerized Flask Web Application</h3>
         <p>
-            Built and deployed Flask application using Git and Docker.
+            Developed Flask application using Git and Docker.
         </p>
     </div>
 
     <div class="card">
-        <h3>Secure Persona Prediction</h3>
+        <h3>Secure Persona Predictions and Data Leakage Prevention</h3>
         <p>
-            Machine learning based secure prediction and
-            data leakage prevention system.
+            Machine learning based secure prediction system with
+            privacy-focused architecture.
         </p>
     </div>
 
     <div class="card">
         <h3>Student Management System</h3>
         <p>
-            MySQL based CRUD application for student records.
+            Database-driven application using MySQL supporting CRUD operations.
         </p>
     </div>
 
     <div class="card">
         <h3>Online Quiz Application</h3>
         <p>
-            Web application for conducting quizzes with automatic scoring.
+            Web-based quiz system with automatic score evaluation.
         </p>
     </div>
 
-</div>
-```
-
 </section>
 
-<section>
-    <h2>Certifications</h2>
+<section id="internships">
 
-```
-<div class="card">Artificial Intelligence & Machine Learning - APSSDC</div>
-<div class="card">Frontend Development Internship - CodeAlpha</div>
-<div class="card">Python Internship - Vaarada</div>
-<div class="card">SQL Certification</div>
-```
-
-</section>
-
-<section>
     <h2>Internships</h2>
 
-```
-<div class="card">
-    <h3>AI & ML Intern - APSSDC</h3>
-    <p>May 2024 - July 2024</p>
-</div>
+    <div class="card">
+        <h3>Artificial Intelligence & Machine Learning Intern</h3>
+        <p>APSSDC | May 2024 - July 2024</p>
+    </div>
 
-<div class="card">
-    <h3>Python Intern - Geekster</h3>
-    <p>June 2024 - July 2024</p>
-</div>
-```
+    <div class="card">
+        <h3>Python Intern</h3>
+        <p>Geekster | June 2024 - July 2024</p>
+    </div>
+
+</section>
+
+<section id="leadership">
+
+    <h2>Leadership & Activities</h2>
+
+    <ul>
+        <li>Lady Representative</li>
+        <li>Project Team Lead</li>
+        <li>Attended Create Your Own AI Workshop</li>
+        <li>Participated in AI & AI Tools Webinars</li>
+    </ul>
 
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
 
-```
-<div class="card">
+    <h2>Contact Me</h2>
+
     <p><strong>Name:</strong> Meghana Mandla</p>
+
     <p><strong>Email:</strong> meghanamandla05@gmail.com</p>
-    <p><strong>Location:</strong> Nellore, Andhra Pradesh</p>
+
+    <p><strong>Location:</strong> Nellore, Andhra Pradesh - 524230</p>
+
     <p><strong>Languages:</strong> English, Telugu, Hindi</p>
-</div>
-```
 
 </section>
 
-<footer>
-    <p>© 2026 Meghana Mandla. All Rights Reserved.</p>
-</footer>
+<script src="main.js"></script>
 
 </body>
 </html>
+```
