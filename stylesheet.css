@@ -203,16 +203,19 @@ section h2{
     text-align:center;
 }
 
-#coding i{
-    font-size:50px;
-    color:#0ef;
-    margin-bottom:15px;
-}
-
 /* CONTACT */
 
 #contact .card{
     text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#06141f;
+    color:#fff;
 }
 
 /* SCROLLBAR */
