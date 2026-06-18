@@ -326,7 +326,6 @@ footer{
     margin-right:10px;
     vertical-align:middle;
 }
-
 @keyframes spin{
     0%{
         transform:rotate(0deg);
@@ -334,4 +333,22 @@ footer{
     100%{
         transform:rotate(360deg);
     }
+}
+
+/* CUSTOM CURSOR */
+
+*{
+    cursor:none;
+}
+
+.cursor{
+    position:fixed;
+    width:20px;
+    height:20px;
+    border:2px solid #0ef;
+    border-radius:50%;
+    pointer-events:none;
+    transform:translate(-50%, -50%);
+    box-shadow:0 0 15px #0ef;
+    z-index:9999;
 }
