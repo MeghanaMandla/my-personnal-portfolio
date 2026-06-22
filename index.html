@@ -1,572 +1,448 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Meghana Mandla | Python Developer Portfolio</title>
-
-    <meta name="description"
-        content="Meghana Mandla Portfolio - Python Developer, AI and Machine Learning Enthusiast, DevOps Learner and Computer Science Engineer.">
-
+    <meta name="description" content="Meghana Mandla Portfolio - Python Developer, AI and Machine Learning Enthusiast, DevOps Learner and Computer Science Engineer.">
     <link rel="stylesheet" href="stylesheet.css">
-
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 
 <body>
 
+    <!-- WebGL 3D Background -->
+    <canvas id="bg"></canvas>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
     <header class="header">
+        <a href="#" class="logo">MM<span>.</span></a>
 
-        <a href="#" class="logo">Meghana Mandla</a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
 
-    
-<nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    
-    
-</nav>
+        <nav class="navbar" id="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-        <button id="theme-toggle">🌙</button>
-
+        <button id="theme-toggle" title="Toggle theme">🌙</button>
     </header>
 
     <section class="home" id="home">
-
         <div class="home-content">
-
-            <img src="profile.jpg" alt="Meghana Mandla" class="profile-pic">
-
-            <h3>Hello, It's Me</h3>
-
-            <h1>Meghana Mandla</h1>
-
-            <h3>
-                And I'm a
-                <span class="text"></span>
-            </h3>
-
-            <p>
+            <div class="profile-wrapper">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+                <img src="profile.jpg" alt="Meghana Mandla" class="profile-pic">
+            </div>
+            <h3 class="greeting">Hello, It's Me</h3>
+            <h1 class="name">Meghana Mandla</h1>
+            <h3 class="role">And I'm a <span class="text"></span></h3>
+            <p class="bio">
                 Motivated Computer Science Engineering student,
-                Python Developer, AI & Machine Learning Enthusiast,
+                Python Developer, AI &amp; Machine Learning Enthusiast,
                 and DevOps Learner passionate about building
                 real-world software applications.
             </p>
-
             <div class="home-sci">
-
-                <a href="https://github.com/MeghanaMandla"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://github.com/MeghanaMandla" target="_blank" rel="noopener noreferrer" title="GitHub">
                     <i class='bx bxl-github'></i>
                 </a>
-
-                <a href="mailto:meghanamandla05@gmail.com">
+                <a href="mailto:meghanamandla05@gmail.com" title="Email">
                     <i class='bx bx-envelope'></i>
                 </a>
-
-                <a href="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/meghana-mandla" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-
             </div>
-
-            <a href="#about" class="btn-box">
-                More About Me
-            </a>
-
-            <a href="resume.pdf" target="_blank" class="btn-box">
-                Download Resume
-            </a>
-
+            <div class="btn-group">
+                <a href="#about" class="btn-box btn-primary">More About Me</a>
+                <a href="resume.pdf" target="_blank" class="btn-box btn-outline">Download Resume</a>
+            </div>
         </div>
-
+        <div class="scroll-indicator">
+            <div class="mouse"><div class="wheel"></div></div>
+            <p>Scroll</p>
+        </div>
     </section>
 
     <section id="about">
-
-        <h2>About Me</h2>
-
-        <div class="card">
-
-        
-<p>
-    I am Meghana Mandla, a Computer Science Engineering student at
-    Andhra Engineering College. I am passionate about Python Development,
-    Artificial Intelligence, Machine Learning, Web Development, SQL,
-    Docker, Git and DevOps. I enjoy building real-world projects and
-    continuously learning new technologies to enhance my technical skills.
-</p>
-
-
-
+        <div class="section-header">
+            <h2>About <span>Me</span></h2>
+            <div class="section-line"></div>
         </div>
-
-</section>
-
-<section id="skills">
-
-    <h2>Technical Skills</h2>
-
-    <div class="skill">
-        <h3>🐍 Python <span>90%</span></h3>
-        <div class="bar">
-            <div class="python"></div>
+        <div class="card about-card">
+            <p>
+                I am Meghana Mandla, a Computer Science Engineering student at
+                Andhra Engineering College. I am passionate about Python Development,
+                Artificial Intelligence, Machine Learning, Web Development, SQL,
+                Docker, Git and DevOps. I enjoy building real-world projects and
+                continuously learning new technologies to enhance my technical skills.
+            </p>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">9+</span>
+                    <span class="stat-label">Tech Skills</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="skill">
-        <h3>🗄️ SQL <span>85%</span></h3>
-        <div class="bar">
-            <div class="sql"></div>
+    <section id="skills">
+        <div class="section-header">
+            <h2>Technical <span>Skills</span></h2>
+            <div class="section-line"></div>
         </div>
-    </div>
-
-    <div class="skill">
-        <h3>🌐 HTML & CSS <span>85%</span></h3>
-        <div class="bar">
-            <div class="html"></div>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>🐍 Python <span>90%</span></h3>
+                <div class="bar"><div data-percent="90"></div></div>
+            </div>
+            <div class="skill">
+                <h3>🗄️ SQL <span>85%</span></h3>
+                <div class="bar"><div data-percent="85"></div></div>
+            </div>
+            <div class="skill">
+                <h3>🌐 HTML &amp; CSS <span>85%</span></h3>
+                <div class="bar"><div data-percent="85"></div></div>
+            </div>
+            <div class="skill">
+                <h3>🔧 Git &amp; GitHub <span>85%</span></h3>
+                <div class="bar"><div data-percent="85"></div></div>
+            </div>
+            <div class="skill">
+                <h3>🐳 Docker <span>75%</span></h3>
+                <div class="bar"><div data-percent="75"></div></div>
+            </div>
+            <div class="skill">
+                <h3>☁️ Kubernetes <span>65%</span></h3>
+                <div class="bar"><div data-percent="65"></div></div>
+            </div>
+            <div class="skill">
+                <h3>🐧 Linux <span>70%</span></h3>
+                <div class="bar"><div data-percent="70"></div></div>
+            </div>
+            <div class="skill">
+                <h3>🤖 Machine Learning <span>75%</span></h3>
+                <div class="bar"><div data-percent="75"></div></div>
+            </div>
+            <div class="skill">
+                <h3>💬 Prompt Engineering <span>80%</span></h3>
+                <div class="bar"><div data-percent="80"></div></div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="skill">
-        <h3>🔧 Git & GitHub <span>85%</span></h3>
-        <div class="bar">
-            <div class="git"></div>
+    <section id="softskills">
+        <div class="section-header">
+            <h2>Non-Technical <span>Skills</span></h2>
+            <div class="section-line"></div>
         </div>
-    </div>
-
-    <div class="skill">
-        <h3>🐳 Docker <span>75%</span></h3>
-        <div class="bar">
-            <div class="docker"></div>
+        <div class="chips-grid">
+            <div class="chip">🗣️ Communication Skills</div>
+            <div class="chip">🤝 Team Collaboration</div>
+            <div class="chip">🎯 Problem Solving</div>
+            <div class="chip">⏰ Time Management</div>
+            <div class="chip">💡 Critical Thinking</div>
+            <div class="chip">📈 Adaptability</div>
+            <div class="chip">🚀 Quick Learning</div>
+            <div class="chip">👩‍💼 Leadership Skills</div>
+            <div class="chip">📋 Project Management</div>
+            <div class="chip">🔍 Attention to Detail</div>
+            <div class="chip">🤗 Positive Attitude</div>
+            <div class="chip">📢 Presentation Skills</div>
         </div>
-    </div>
+    </section>
 
-    <div class="skill">
-        <h3>☁️ Kubernetes <span>65%</span></h3>
-        <div class="bar">
-            <div class="kubernetes"></div>
+    <section id="tools">
+        <div class="section-header">
+            <h2>Tools &amp; <span>Technologies</span></h2>
+            <div class="section-line"></div>
         </div>
-    </div>
-
-    <div class="skill">
-        <h3>🐧 Linux <span>70%</span></h3>
-        <div class="bar">
-            <div class="linux"></div>
+        <div class="chips-grid">
+            <div class="chip">💻 VS Code</div>
+            <div class="chip">🐙 GitHub</div>
+            <div class="chip">🔧 Git</div>
+            <div class="chip">🐳 Docker</div>
+            <div class="chip">🗄️ MySQL Workbench</div>
+            <div class="chip">☁️ GitHub Pages</div>
+            <div class="chip">💬 Microsoft Tools</div>
+            <div class="chip">🌐 Google Chrome</div>
         </div>
-    </div>
-
-    <div class="skill">
-        <h3>🤖 Machine Learning <span>75%</span></h3>
-        <div class="bar">
-            <div class="ml"></div>
-        </div>
-    </div>
-
-    <div class="skill">
-        <h3>💬 Prompt Engineering <span>80%</span></h3>
-        <div class="bar">
-            <div class="prompt"></div>
-        </div>
-    </div>
-
-</section>
-
-
-<section id="softskills">
-
-    <h2>Non-Technical Skills</h2>
-
-    <div class="card">🗣️ Communication Skills</div>
-
-    <div class="card">🤝 Team Collaboration</div>
-
-    <div class="card">🎯 Problem Solving</div>
-
-    <div class="card">⏰ Time Management</div>
-
-    <div class="card">💡 Critical Thinking</div>
-
-    <div class="card">📈 Adaptability</div>
-
-    <div class="card">🚀 Quick Learning Ability</div>
-
-    <div class="card">👩‍💼 Leadership Skills</div>
-
-    <div class="card">📋 Project Management</div>
-
-    <div class="card">🔍 Attention to Detail</div>
-
-    <div class="card">🤗 Positive Attitude</div>
-
-    <div class="card">📢 Presentation Skills</div>
-
-</section>
-
-<section id="tools">
-
-    <h2>Tools & Technologies</h2>
-
-    <div class="card">💻 Visual Studio Code</div>
-    <div class="card">🐙 GitHub</div>
-    <div class="card">🔧 Git</div>
-    <div class="card">🐳 Docker</div>
-    <div class="card">🗄️ MySQL Workbench</div>
-    <div class="card">☁️ GitHub Pages</div>
-    <div class="card">💬 Microsoft tools</div>
-    <div class="card">🌐 Google Chrome</div>
-
-
-</section>
+    </section>
 
     <section id="education">
-
-        <h2>Education</h2>
-
-        <div class="card">
-
-            <img src="college-logo.png"
-                alt="College Logo"
-                class="edu-logo">
-
-            <h3>B.Tech - Computer Science & Engineering</h3>
-
-            <p>Andhra Engineering College</p>
-
-            <p>2022 - 2026</p>
-
+        <div class="section-header">
+            <h2>My <span>Education</span></h2>
+            <div class="section-line"></div>
         </div>
-
-        <div class="card">
-            <h3>Intermediate</h3>
-            <p>Pragathi Junior College</p>
-            <p>82%</p>
+        <div class="education-grid">
+            <div class="card edu-card">
+                <div class="edu-year">2022 – 2026</div>
+                <img src="college-logo.png" alt="College Logo" class="edu-logo">
+                <h3>B.Tech – Computer Science &amp; Engineering</h3>
+                <p>Andhra Engineering College</p>
+            </div>
+            <div class="card edu-card">
+                <div class="edu-year">Intermediate</div>
+                <h3>Intermediate</h3>
+                <p>Pragathi Junior College</p>
+                <p class="score">82%</p>
+            </div>
+            <div class="card edu-card">
+                <div class="edu-year">SSC</div>
+                <h3>SSC</h3>
+                <p>ZPHS Nandipadu</p>
+                <p class="score">CGPA 10/10 ⭐</p>
+            </div>
         </div>
-
-        <div class="card">
-            <h3>SSC</h3>
-            <p>ZPHS Nandipadu</p>
-            <p>CGPA 10/10</p>
-        </div>
-
     </section>
 
-<section id="projects">
-
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>Advanced AI Student Management System</h3>
-        <p>
-            AI-powered student management platform for handling student records,
-            attendance, performance analysis and academic monitoring.
-        </p>
-        <a href="https://github.com/MeghanaMandla/advanced-ai-student-management-system" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Face Expression Detection</h3>
-        <p>
-            Real-time emotion recognition system using Python, OpenCV and DeepFace.
-            Detects emotions from webcam video streams.
-        </p>
-        <a href="https://github.com/MeghanaMandla/face-expression-detection" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Secure Persona Prediction and Data Leakage Prevention System</h3>
-        <p>
-            Machine learning based system for user persona prediction,
-            clustering and data leakage prevention.
-        </p>
-        <a href="https://github.com/MeghanaMandla/Secure-Persona-Prediction-and-Data-Leakage-Prevention-System" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Containerized Flask Portfolio</h3>
-        <p>
-            Flask-based portfolio application deployed using Docker containers.
-        </p>
-        <a href="https://github.com/MeghanaMandla/containerized-flask-portfolio" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>ATM Application</h3>
-        <p>
-            Python-based ATM simulation supporting balance enquiry,
-            withdrawal and deposit operations.
-        </p>
-        <a href="https://github.com/MeghanaMandla/ATM-Application" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Todo List Application</h3>
-        <p>
-            Task management application for creating, updating and deleting tasks.
-        </p>
-        <a href="https://github.com/MeghanaMandla/Todo_list" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Simple Calculator</h3>
-        <p>
-            Calculator application developed using HTML, CSS and JavaScript.
-        </p>
-        <a href="https://github.com/MeghanaMandla/Simple-Calculator" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>CodeAlpha Image Gallery</h3>
-        <p>
-            Responsive image gallery project developed during CodeAlpha tasks.
-        </p>
-        <a href="https://github.com/MeghanaMandla/CodeAlpha_Image-gallery_Task1" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>CodeAlpha Portfolio Website</h3>
-        <p>
-            Portfolio website project created during CodeAlpha internship tasks.
-        </p>
-        <a href="https://github.com/MeghanaMandla/CodeAlpha_Portfolio_Task3" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>CodeAlpha Calculator</h3>
-        <p>
-            Calculator web application developed using HTML, CSS and JavaScript.
-        </p>
-        <a href="https://github.com/MeghanaMandla/CodeAlpha_Calculator_Task2" target="_blank">
-            View Project
-        </a>
-    </div>
-
-    <div class="card">
-        <h3>Personal Portfolio Website</h3>
-        <p>
-            Personal portfolio website showcasing education, projects,
-            skills and achievements.
-        </p>
-        <a href="https://github.com/MeghanaMandla/my-personnal-portfolio" target="_blank">
-            View Project
-        </a>
-    </div>
-
-</section>
+    <section id="projects">
+        <div class="section-header">
+            <h2>My <span>Projects</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="projects-grid">
+            <div class="card project-card featured">
+                <div class="project-badge">Featured</div>
+                <h3>Advanced AI Student Management System</h3>
+                <p>AI-powered platform for handling student records, attendance, performance analysis and academic monitoring.</p>
+                <a href="https://github.com/MeghanaMandla/advanced-ai-student-management-system" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card featured">
+                <div class="project-badge">Featured</div>
+                <h3>Face Expression Detection</h3>
+                <p>Real-time emotion recognition system using Python, OpenCV and DeepFace. Detects emotions from webcam streams.</p>
+                <a href="https://github.com/MeghanaMandla/face-expression-detection" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card featured">
+                <div class="project-badge">Featured</div>
+                <h3>Secure Persona Prediction System</h3>
+                <p>ML-based system for user persona prediction, clustering and data leakage prevention.</p>
+                <a href="https://github.com/MeghanaMandla/Secure-Persona-Prediction-and-Data-Leakage-Prevention-System" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card">
+                <h3>Containerized Flask Portfolio</h3>
+                <p>Flask-based portfolio application deployed using Docker containers.</p>
+                <a href="https://github.com/MeghanaMandla/containerized-flask-portfolio" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card">
+                <h3>ATM Application</h3>
+                <p>Python-based ATM simulation supporting balance enquiry, withdrawal and deposit operations.</p>
+                <a href="https://github.com/MeghanaMandla/ATM-Application" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card">
+                <h3>Todo List Application</h3>
+                <p>Task management application for creating, updating and deleting tasks.</p>
+                <a href="https://github.com/MeghanaMandla/Todo_list" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card">
+                <h3>Simple Calculator</h3>
+                <p>Calculator application developed using HTML, CSS and JavaScript.</p>
+                <a href="https://github.com/MeghanaMandla/Simple-Calculator" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card">
+                <h3>CodeAlpha Image Gallery</h3>
+                <p>Responsive image gallery project developed during CodeAlpha internship tasks.</p>
+                <a href="https://github.com/MeghanaMandla/CodeAlpha_Image-gallery_Task1" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card">
+                <h3>CodeAlpha Portfolio Website</h3>
+                <p>Portfolio website project created during CodeAlpha internship tasks.</p>
+                <a href="https://github.com/MeghanaMandla/CodeAlpha_Portfolio_Task3" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card">
+                <h3>CodeAlpha Calculator</h3>
+                <p>Calculator web application developed using HTML, CSS and JavaScript.</p>
+                <a href="https://github.com/MeghanaMandla/CodeAlpha_Calculator_Task2" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+            <div class="card project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>Personal portfolio showcasing education, projects, skills and achievements.</p>
+                <a href="https://github.com/MeghanaMandla/my-personnal-portfolio" target="_blank" class="project-link">
+                    <i class='bx bxl-github'></i> View Project
+                </a>
+            </div>
+        </div>
+    </section>
 
     <section id="certifications">
-
-        <h2>Certifications</h2>
-
-
-<div class="card">Python Programming Certification</div>
-<div class="card">Machine Learning Fundamentals</div>
-<div class="card">SQL and Database Management</div>
-<div class="card">Data Structures and Algorithms</div>
-<div class="card">HTML, CSS & JavaScript Certification</div>
-<div class="card">Git & GitHub Version Control</div>
-<div class="card">Docker Basics Certification</div>
-<div class="card">Introduction to DevOps</div>
-<div class="card">Deep Learning Basics</div>
-<div class="card">AI Fundamentals Certificate</div>
-
-
-
+        <div class="section-header">
+            <h2>My <span>Certifications</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="certs-grid">
+            <div class="card cert-card">🏆 Python Programming Certification</div>
+            <div class="card cert-card">🏆 Machine Learning Fundamentals</div>
+            <div class="card cert-card">🏆 SQL and Database Management</div>
+            <div class="card cert-card">🏆 Data Structures and Algorithms</div>
+            <div class="card cert-card">🏆 HTML, CSS &amp; JavaScript</div>
+            <div class="card cert-card">🏆 Git &amp; GitHub Version Control</div>
+            <div class="card cert-card">🏆 Docker Basics Certification</div>
+            <div class="card cert-card">🏆 Introduction to DevOps</div>
+            <div class="card cert-card">🏆 Deep Learning Basics</div>
+            <div class="card cert-card">🏆 AI Fundamentals Certificate</div>
+        </div>
     </section>
 
-<section id="internships">
-
-    <h2>Internships</h2>
-
-    <div class="card">
-        <h3>CodeAlpha - Web Development Intern</h3>
-        <p>
-            Completed web development projects using HTML, CSS and JavaScript,
-            including Portfolio Website, Calculator Application and Image Gallery.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Project-Based Learning Experience</h3>
-        <p>
-            Developed multiple real-world projects including Face Expression Detection,
-            Advanced AI Student Management System, ATM Applications and
-            Secure Persona Prediction System using Python and Machine Learning.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Career Objective</h3>
-        <p>
-            Seeking internship and entry-level opportunities in Python Development,
-            Artificial Intelligence, Machine Learning, Data Science,
-            Full Stack Development and DevOps.
-        </p>
-    </div>
-
+    <section id="internships">
+        <div class="section-header">
+            <h2>Experience &amp; <span>Internships</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="card">
+            <h3>CodeAlpha — Web Development Intern</h3>
+            <p>Completed web development projects using HTML, CSS and JavaScript, including Portfolio Website, Calculator Application and Image Gallery.</p>
+        </div>
+        <div class="card">
+            <h3>Project-Based Learning Experience</h3>
+            <p>Developed multiple real-world projects including Face Expression Detection, Advanced AI Student Management System, ATM Applications and Secure Persona Prediction System using Python and Machine Learning.</p>
+        </div>
+        <div class="card">
+            <h3>Career Objective</h3>
+            <p>Seeking internship and entry-level opportunities in Python Development, Artificial Intelligence, Machine Learning, Data Science, Full Stack Development and DevOps.</p>
+        </div>
     </section>
-<section id="ongoing">
 
-    <h2>Current Professional Activities</h2>
-
-    <div class="card">
-
-        <h3>
-            <span class="loader"></span>
-            Recruitment Process in Progress
-        </h3>
-
-        <ul>
-            <li>Participating in the recruitment process with Unify Technologies.</li>
-            <li>Preparing for technical interviews and coding assessments.</li>
-            <li>Enhancing problem-solving and software development skills.</li>
-            <li>Building real-world projects using Python and Machine Learning.</li>
-            <li>Learning DevOps tools including Docker, Kubernetes, Linux and Git.</li>
-            <li>Improving knowledge of Artificial Intelligence and Web Development.</li>
-        </ul>
-
-    </div>
-
-</section>
+    <section id="ongoing">
+        <div class="section-header">
+            <h2>Current <span>Activities</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="card">
+            <h3><span class="loader"></span> Recruitment Process in Progress</h3>
+            <ul>
+                <li>Participating in the recruitment process with Unify Technologies.</li>
+                <li>Preparing for technical interviews and coding assessments.</li>
+                <li>Enhancing problem-solving and software development skills.</li>
+                <li>Building real-world projects using Python and Machine Learning.</li>
+                <li>Learning DevOps tools including Docker, Kubernetes, Linux and Git.</li>
+                <li>Improving knowledge of Artificial Intelligence and Web Development.</li>
+            </ul>
+        </div>
+    </section>
 
     <section id="languages">
+        <div class="section-header">
+            <h2>Languages <span>Known</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="chips-grid langs">
+            <div class="chip lang-chip">🇬🇧 English</div>
+            <div class="chip lang-chip">🇮🇳 Telugu</div>
+            <div class="chip lang-chip">🇮🇳 Hindi</div>
+        </div>
+    </section>
 
-    <h2>Languages Known</h2>
+    <section id="hobbies">
+        <div class="section-header">
+            <h2>Hobbies &amp; <span>Interests</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="chips-grid">
+            <div class="chip">💻 Building Software Projects</div>
+            <div class="chip">🤖 Exploring AI &amp; ML</div>
+            <div class="chip">📚 Learning New Technologies</div>
+            <div class="chip">🌐 Web Development</div>
+            <div class="chip">🔍 Problem Solving &amp; Coding</div>
+            <div class="chip">🚀 Exploring DevOps &amp; Cloud</div>
+        </div>
+    </section>
 
-    <div class="card">🇬🇧 English</div>
+    <section id="coding">
+        <div class="section-header">
+            <h2>Coding <span>Profiles</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="card" style="text-align:center">
+            <p>
+                <i class='bx bxl-github'></i>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/MeghanaMandla" target="_blank" rel="noopener noreferrer">github.com/MeghanaMandla</a>
+            </p>
+            <p style="margin-top:15px">
+                <i class='bx bxl-linkedin'></i>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/meghana-mandla" target="_blank" rel="noopener noreferrer">Meghana Mandla</a>
+            </p>
+        </div>
+    </section>
 
-    <div class="card">🇮🇳 Telugu</div>
+    <section id="contact">
+        <div class="section-header">
+            <h2>Contact <span>Me</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="card contact-card">
+            <div class="contact-item">
+                <i class='bx bx-user'></i>
+                <div><strong>Name</strong><p>Meghana Mandla</p></div>
+            </div>
+            <div class="contact-item">
+                <i class='bx bx-envelope'></i>
+                <div><strong>Email</strong><p><a href="mailto:meghanamandla05@gmail.com">meghanamandla05@gmail.com</a></p></div>
+            </div>
+            <div class="contact-item">
+                <i class='bx bxl-github'></i>
+                <div><strong>GitHub</strong><p><a href="https://github.com/MeghanaMandla" target="_blank" rel="noopener noreferrer">github.com/MeghanaMandla</a></p></div>
+            </div>
+            <div class="contact-item">
+                <i class='bx bxl-linkedin'></i>
+                <div><strong>LinkedIn</strong><p><a href="https://www.linkedin.com/in/meghana-mandla" target="_blank" rel="noopener noreferrer">linkedin.com/in/meghana-mandla</a></p></div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">🇮🇳 Hindi</div>
+    <footer>
+        <p>Designed &amp; Built by <span>Meghana Mandla</span> · © 2026</p>
+    </footer>
 
-</section>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-
-<section id="hobbies">
-
-    <h2>Hobbies & Interests</h2>
-
-    <div class="card">💻 Building Software Projects</div>
-
-    <div class="card">🤖 Exploring Artificial Intelligence & Machine Learning</div>
-
-    <div class="card">📚 Learning New Technologies</div>
-
-    <div class="card">🌐 Web Development</div>
-
-    <div class="card">🔍 Problem Solving & Coding Challenges</div>
-
-    <div class="card">🚀 Exploring DevOps & Cloud Technologies</div>
-
-</section>
-<section id="coding">
-
-    <h2>Coding Profiles</h2>
-
-    <div class="card">
-
-        <p>
-            <i class='bx bxl-github'></i>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/MeghanaMandla"
-                target="_blank"
-                rel="noopener noreferrer">
-                github.com/MeghanaMandla
-            </a>
-        </p>
-
-        <p>
-            <i class='bx bxl-linkedin'></i>
-            <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/meghana-mandla"
-                target="_blank"
-                rel="noopener noreferrer">
-                Meghana Mandla
-            </a>
-        </p>
-
-    </div>
-
-</section>
-
-<section id="contact">
-
-    <h2>Contact Me</h2>
-
-    <div class="card">
-
-        <p>
-            <i class='bx bx-user'></i>
-            <strong>Name:</strong> Meghana Mandla
-        </p>
-
-        <p>
-            <i class='bx bx-envelope'></i>
-            <strong>Email:</strong>
-            <a href="mailto:meghanamandla05@gmail.com">
-                meghanamandla05@gmail.com
-            </a>
-        </p>
-
-        <p>
-            <i class='bx bxl-github'></i>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/MeghanaMandla"
-                target="_blank"
-                rel="noopener noreferrer">
-                github.com/MeghanaMandla
-            </a>
-        </p>
-
-        <p>
-            <i class='bx bxl-linkedin'></i>
-            <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/meghana-mandla"
-                target="_blank"
-                rel="noopener noreferrer">
-                linkedin.com/in/meghana-mandla
-            </a>
-        </p>
-
-    </div>
-
-</section>
-<footer>
-    <p>© 2026 Meghana Mandla. All Rights Reserved.</p>
-</footer>
-
-<div class="cursor"></div>
-
-<script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>
-
-    
