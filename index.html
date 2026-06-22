@@ -4,445 +4,548 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghana Mandla | Python Developer Portfolio</title>
-    <meta name="description" content="Meghana Mandla Portfolio - Python Developer, AI and Machine Learning Enthusiast, DevOps Learner and Computer Science Engineer.">
+    <title>Meghana Mandla — Python Developer & AI Engineer</title>
+    <meta name="description" content="Meghana Mandla — Python Developer, AI/ML Engineer, and DevOps Learner building intelligent software solutions.">
+
+    <!-- Fonts: Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="stylesheet.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 
 <body>
 
-    <!-- WebGL 3D Background -->
-    <canvas id="bg"></canvas>
+    <!-- Gradient blob that follows cursor -->
+    <div class="gradient-blob" id="gradientBlob" aria-hidden="true"></div>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
+    <!-- ═══════════════════════════════════ NAV ═══════════════════════════════════ -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Primary">
+        <a href="#home" class="nav-logo">
+            <span class="logo-bracket">{</span>MM<span class="logo-bracket">}</span>
+        </a>
 
-    <header class="header">
-        <a href="#" class="logo">MM<span>.</span></a>
+        <ul class="nav-links" role="list">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
 
-        <div class="menu-toggle" id="menuToggle">
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume magnetic" aria-label="Download Resume">
+            <span>Resume</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span><span></span><span></span>
-        </div>
+        </button>
+    </nav>
 
-        <nav class="navbar" id="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+        <ul role="list">
+            <li><a href="#about" class="drawer-link">About</a></li>
+            <li><a href="#projects" class="drawer-link">Projects</a></li>
+            <li><a href="#skills" class="drawer-link">Skills</a></li>
+            <li><a href="#contact" class="drawer-link">Contact</a></li>
+        </ul>
+        <a href="resume.pdf" target="_blank" class="btn-resume full">Resume ↗</a>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
 
-        <button id="theme-toggle" title="Toggle theme">🌙</button>
-    </header>
+    <main>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <div class="profile-wrapper">
-                <div class="ring ring-1"></div>
-                <div class="ring ring-2"></div>
-                <div class="ring ring-3"></div>
-                <img src="profile.jpg" alt="Meghana Mandla" class="profile-pic">
-            </div>
-            <h3 class="greeting">Hello, It's Me</h3>
-            <h1 class="name">Meghana Mandla</h1>
-            <h3 class="role">And I'm a <span class="text"></span></h3>
-            <p class="bio">
-                Motivated Computer Science Engineering student,
-                Python Developer, AI &amp; Machine Learning Enthusiast,
-                and DevOps Learner passionate about building
-                real-world software applications.
-            </p>
-            <div class="home-sci">
-                <a href="https://github.com/MeghanaMandla" target="_blank" rel="noopener noreferrer" title="GitHub">
-                    <i class='bx bxl-github'></i>
-                </a>
-                <a href="mailto:meghanamandla05@gmail.com" title="Email">
-                    <i class='bx bx-envelope'></i>
-                </a>
-                <a href="https://www.linkedin.com/in/meghana-mandla" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class='bx bxl-linkedin'></i>
-                </a>
-            </div>
-            <div class="btn-group">
-                <a href="#about" class="btn-box btn-primary">More About Me</a>
-                <a href="resume.pdf" target="_blank" class="btn-box btn-outline">Download Resume</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse"><div class="wheel"></div></div>
-            <p>Scroll</p>
-        </div>
-    </section>
+        <!-- ═══════════════════════════════ HERO ════════════════════════════════ -->
+        <section class="hero" id="home">
+            <div class="hero-grid" aria-hidden="true"></div>
 
-    <section id="about">
-        <div class="section-header">
-            <h2>About <span>Me</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card about-card">
-            <p>
-                I am Meghana Mandla, a Computer Science Engineering student at
-                Andhra Engineering College. I am passionate about Python Development,
-                Artificial Intelligence, Machine Learning, Web Development, SQL,
-                Docker, Git and DevOps. I enjoy building real-world projects and
-                continuously learning new technologies to enhance my technical skills.
-            </p>
-            <div class="about-stats">
-                <div class="stat-item">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Projects</span>
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-up" style="--delay:0.1s">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    Open to new opportunities
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">9+</span>
-                    <span class="stat-label">Tech Skills</span>
+
+                <h1 class="hero-title">
+                    <span class="title-line animate-fade-up" style="--delay:0.25s">Hi, I'm</span>
+                    <span class="title-line title-name animate-fade-up" style="--delay:0.4s">Meghana</span>
+                    <span class="title-line title-accent animate-fade-up" style="--delay:0.55s">Mandla.</span>
+                </h1>
+
+                <p class="hero-role animate-fade-up" style="--delay:0.7s">
+                    <span class="mono">&lt;</span>Python Developer
+                    <span class="separator" aria-hidden="true">/</span>
+                    AI Engineer
+                    <span class="separator" aria-hidden="true">/</span>
+                    DevOps Learner<span class="mono">&gt;</span>
+                </p>
+
+                <p class="hero-desc animate-fade-up" style="--delay:0.85s">
+                    CS Engineering student building intelligent software at the intersection of
+                    AI, Machine Learning, and modern DevOps—turning ideas into real-world applications.
+                </p>
+
+                <div class="hero-cta animate-fade-up" style="--delay:1s">
+                    <a href="#projects" class="btn-primary magnetic">View My Work</a>
+                    <a href="#contact" class="btn-ghost magnetic">Let's Talk</a>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Certifications</span>
+
+                <div class="hero-stats animate-fade-up" style="--delay:1.15s">
+                    <div class="stat">
+                        <span class="stat-num">10<span class="stat-plus">+</span></span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat">
+                        <span class="stat-num">9<span class="stat-plus">+</span></span>
+                        <span class="stat-label">Tech Skills</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat">
+                        <span class="stat-num">10<span class="stat-plus">+</span></span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="skills">
-        <div class="section-header">
-            <h2>Technical <span>Skills</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="skills-container">
-            <div class="skill">
-                <h3>🐍 Python <span>90%</span></h3>
-                <div class="bar"><div data-percent="90"></div></div>
-            </div>
-            <div class="skill">
-                <h3>🗄️ SQL <span>85%</span></h3>
-                <div class="bar"><div data-percent="85"></div></div>
-            </div>
-            <div class="skill">
-                <h3>🌐 HTML &amp; CSS <span>85%</span></h3>
-                <div class="bar"><div data-percent="85"></div></div>
-            </div>
-            <div class="skill">
-                <h3>🔧 Git &amp; GitHub <span>85%</span></h3>
-                <div class="bar"><div data-percent="85"></div></div>
-            </div>
-            <div class="skill">
-                <h3>🐳 Docker <span>75%</span></h3>
-                <div class="bar"><div data-percent="75"></div></div>
-            </div>
-            <div class="skill">
-                <h3>☁️ Kubernetes <span>65%</span></h3>
-                <div class="bar"><div data-percent="65"></div></div>
-            </div>
-            <div class="skill">
-                <h3>🐧 Linux <span>70%</span></h3>
-                <div class="bar"><div data-percent="70"></div></div>
-            </div>
-            <div class="skill">
-                <h3>🤖 Machine Learning <span>75%</span></h3>
-                <div class="bar"><div data-percent="75"></div></div>
-            </div>
-            <div class="skill">
-                <h3>💬 Prompt Engineering <span>80%</span></h3>
-                <div class="bar"><div data-percent="80"></div></div>
-            </div>
-        </div>
-    </section>
+            <div class="hero-visual animate-fade-up" style="--delay:0.4s">
+                <div class="profile-frame">
+                    <div class="profile-ring r-outer" aria-hidden="true"></div>
+                    <div class="profile-ring r-middle" aria-hidden="true"></div>
+                    <div class="profile-ring r-inner" aria-hidden="true"></div>
+                    <img src="profile.jpg" alt="Meghana Mandla" class="profile-img" loading="eager">
+                    <div class="profile-status" aria-label="Status: Available">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Available
+                    </div>
+                </div>
 
-    <section id="softskills">
-        <div class="section-header">
-            <h2>Non-Technical <span>Skills</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="chips-grid">
-            <div class="chip">🗣️ Communication Skills</div>
-            <div class="chip">🤝 Team Collaboration</div>
-            <div class="chip">🎯 Problem Solving</div>
-            <div class="chip">⏰ Time Management</div>
-            <div class="chip">💡 Critical Thinking</div>
-            <div class="chip">📈 Adaptability</div>
-            <div class="chip">🚀 Quick Learning</div>
-            <div class="chip">👩‍💼 Leadership Skills</div>
-            <div class="chip">📋 Project Management</div>
-            <div class="chip">🔍 Attention to Detail</div>
-            <div class="chip">🤗 Positive Attitude</div>
-            <div class="chip">📢 Presentation Skills</div>
-        </div>
-    </section>
+                <div class="floating-tags" aria-hidden="true">
+                    <div class="ftag ftag-1">🐍 Python</div>
+                    <div class="ftag ftag-2">🤖 AI / ML</div>
+                    <div class="ftag ftag-3">🐳 DevOps</div>
+                    <div class="ftag ftag-4">🔧 Git</div>
+                </div>
+            </div>
+        </section>
 
-    <section id="tools">
-        <div class="section-header">
-            <h2>Tools &amp; <span>Technologies</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="chips-grid">
-            <div class="chip">💻 VS Code</div>
-            <div class="chip">🐙 GitHub</div>
-            <div class="chip">🔧 Git</div>
-            <div class="chip">🐳 Docker</div>
-            <div class="chip">🗄️ MySQL Workbench</div>
-            <div class="chip">☁️ GitHub Pages</div>
-            <div class="chip">💬 Microsoft Tools</div>
-            <div class="chip">🌐 Google Chrome</div>
-        </div>
-    </section>
+        <!-- ═══════════════════════════════ ABOUT ════════════════════════════════ -->
+        <section class="about" id="about">
+            <div class="section-label" data-reveal>
+                <span class="mono">01.</span> About Me
+            </div>
 
-    <section id="education">
-        <div class="section-header">
-            <h2>My <span>Education</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="education-grid">
-            <div class="card edu-card">
-                <div class="edu-year">2022 – 2026</div>
-                <img src="college-logo.png" alt="College Logo" class="edu-logo">
-                <h3>B.Tech – Computer Science &amp; Engineering</h3>
-                <p>Andhra Engineering College</p>
-            </div>
-            <div class="card edu-card">
-                <div class="edu-year">Intermediate</div>
-                <h3>Intermediate</h3>
-                <p>Pragathi Junior College</p>
-                <p class="score">82%</p>
-            </div>
-            <div class="card edu-card">
-                <div class="edu-year">SSC</div>
-                <h3>SSC</h3>
-                <p>ZPHS Nandipadu</p>
-                <p class="score">CGPA 10/10 ⭐</p>
-            </div>
-        </div>
-    </section>
+            <div class="about-grid">
+                <div class="about-text" data-reveal data-delay="0">
+                    <h2 class="section-title">Building the future,<br><span class="gradient-text">one commit at a time.</span></h2>
+                    <p>
+                        I'm a Computer Science Engineering student at <strong>Andhra Engineering College</strong>,
+                        driven by a deep passion for Python development, artificial intelligence, and the
+                        DevOps ecosystem. I love turning complex ideas into clean, functional software.
+                    </p>
+                    <p>
+                        Currently seeking opportunities where I can apply my skills in Python, machine
+                        learning, and cloud-native tooling to solve real-world problems at scale.
+                    </p>
+                    <div class="about-links">
+                        <a href="https://github.com/MeghanaMandla" target="_blank" rel="noopener noreferrer" class="text-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                            github.com/MeghanaMandla
+                        </a>
+                        <a href="https://www.linkedin.com/in/meghana-mandla" target="_blank" rel="noopener noreferrer" class="text-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            linkedin.com/in/meghana-mandla
+                        </a>
+                    </div>
+                </div>
 
-    <section id="projects">
-        <div class="section-header">
-            <h2>My <span>Projects</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="projects-grid">
-            <div class="card project-card featured">
-                <div class="project-badge">Featured</div>
-                <h3>Advanced AI Student Management System</h3>
-                <p>AI-powered platform for handling student records, attendance, performance analysis and academic monitoring.</p>
-                <a href="https://github.com/MeghanaMandla/advanced-ai-student-management-system" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
+                <div class="about-cards" data-reveal data-delay="150">
+                    <div class="skill-card">
+                        <div class="skill-card-icon">⚡</div>
+                        <h3>Core Stack</h3>
+                        <p>Python · SQL · HTML/CSS · JavaScript · Flask</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-icon">🧠</div>
+                        <h3>AI / ML</h3>
+                        <p>Machine Learning · Deep Learning · OpenCV · DeepFace · Prompt Engineering</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-icon">🚀</div>
+                        <h3>DevOps</h3>
+                        <p>Docker · Kubernetes · Git · Linux · GitHub Actions</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card-icon">🎓</div>
+                        <h3>Education</h3>
+                        <p>B.Tech CSE · Andhra Engineering College · 2022–2026</p>
+                    </div>
+                </div>
             </div>
-            <div class="card project-card featured">
-                <div class="project-badge">Featured</div>
-                <h3>Face Expression Detection</h3>
-                <p>Real-time emotion recognition system using Python, OpenCV and DeepFace. Detects emotions from webcam streams.</p>
-                <a href="https://github.com/MeghanaMandla/face-expression-detection" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-            <div class="card project-card featured">
-                <div class="project-badge">Featured</div>
-                <h3>Secure Persona Prediction System</h3>
-                <p>ML-based system for user persona prediction, clustering and data leakage prevention.</p>
-                <a href="https://github.com/MeghanaMandla/Secure-Persona-Prediction-and-Data-Leakage-Prevention-System" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-            <div class="card project-card">
-                <h3>Containerized Flask Portfolio</h3>
-                <p>Flask-based portfolio application deployed using Docker containers.</p>
-                <a href="https://github.com/MeghanaMandla/containerized-flask-portfolio" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-            <div class="card project-card">
-                <h3>ATM Application</h3>
-                <p>Python-based ATM simulation supporting balance enquiry, withdrawal and deposit operations.</p>
-                <a href="https://github.com/MeghanaMandla/ATM-Application" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-            <div class="card project-card">
-                <h3>Todo List Application</h3>
-                <p>Task management application for creating, updating and deleting tasks.</p>
-                <a href="https://github.com/MeghanaMandla/Todo_list" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-            <div class="card project-card">
-                <h3>Simple Calculator</h3>
-                <p>Calculator application developed using HTML, CSS and JavaScript.</p>
-                <a href="https://github.com/MeghanaMandla/Simple-Calculator" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-            <div class="card project-card">
-                <h3>CodeAlpha Image Gallery</h3>
-                <p>Responsive image gallery project developed during CodeAlpha internship tasks.</p>
-                <a href="https://github.com/MeghanaMandla/CodeAlpha_Image-gallery_Task1" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-            <div class="card project-card">
-                <h3>CodeAlpha Portfolio Website</h3>
-                <p>Portfolio website project created during CodeAlpha internship tasks.</p>
-                <a href="https://github.com/MeghanaMandla/CodeAlpha_Portfolio_Task3" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-            <div class="card project-card">
-                <h3>CodeAlpha Calculator</h3>
-                <p>Calculator web application developed using HTML, CSS and JavaScript.</p>
-                <a href="https://github.com/MeghanaMandla/CodeAlpha_Calculator_Task2" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-            <div class="card project-card">
-                <h3>Personal Portfolio Website</h3>
-                <p>Personal portfolio showcasing education, projects, skills and achievements.</p>
-                <a href="https://github.com/MeghanaMandla/my-personnal-portfolio" target="_blank" class="project-link">
-                    <i class='bx bxl-github'></i> View Project
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="certifications">
-        <div class="section-header">
-            <h2>My <span>Certifications</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="certs-grid">
-            <div class="card cert-card">🏆 Python Programming Certification</div>
-            <div class="card cert-card">🏆 Machine Learning Fundamentals</div>
-            <div class="card cert-card">🏆 SQL and Database Management</div>
-            <div class="card cert-card">🏆 Data Structures and Algorithms</div>
-            <div class="card cert-card">🏆 HTML, CSS &amp; JavaScript</div>
-            <div class="card cert-card">🏆 Git &amp; GitHub Version Control</div>
-            <div class="card cert-card">🏆 Docker Basics Certification</div>
-            <div class="card cert-card">🏆 Introduction to DevOps</div>
-            <div class="card cert-card">🏆 Deep Learning Basics</div>
-            <div class="card cert-card">🏆 AI Fundamentals Certificate</div>
-        </div>
-    </section>
-
-    <section id="internships">
-        <div class="section-header">
-            <h2>Experience &amp; <span>Internships</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card">
-            <h3>CodeAlpha — Web Development Intern</h3>
-            <p>Completed web development projects using HTML, CSS and JavaScript, including Portfolio Website, Calculator Application and Image Gallery.</p>
-        </div>
-        <div class="card">
-            <h3>Project-Based Learning Experience</h3>
-            <p>Developed multiple real-world projects including Face Expression Detection, Advanced AI Student Management System, ATM Applications and Secure Persona Prediction System using Python and Machine Learning.</p>
-        </div>
-        <div class="card">
-            <h3>Career Objective</h3>
-            <p>Seeking internship and entry-level opportunities in Python Development, Artificial Intelligence, Machine Learning, Data Science, Full Stack Development and DevOps.</p>
-        </div>
-    </section>
-
-    <section id="ongoing">
-        <div class="section-header">
-            <h2>Current <span>Activities</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card">
-            <h3><span class="loader"></span> Recruitment Process in Progress</h3>
-            <ul>
-                <li>Participating in the recruitment process with Unify Technologies.</li>
-                <li>Preparing for technical interviews and coding assessments.</li>
-                <li>Enhancing problem-solving and software development skills.</li>
-                <li>Building real-world projects using Python and Machine Learning.</li>
-                <li>Learning DevOps tools including Docker, Kubernetes, Linux and Git.</li>
-                <li>Improving knowledge of Artificial Intelligence and Web Development.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="languages">
-        <div class="section-header">
-            <h2>Languages <span>Known</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="chips-grid langs">
-            <div class="chip lang-chip">🇬🇧 English</div>
-            <div class="chip lang-chip">🇮🇳 Telugu</div>
-            <div class="chip lang-chip">🇮🇳 Hindi</div>
-        </div>
-    </section>
-
-    <section id="hobbies">
-        <div class="section-header">
-            <h2>Hobbies &amp; <span>Interests</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="chips-grid">
-            <div class="chip">💻 Building Software Projects</div>
-            <div class="chip">🤖 Exploring AI &amp; ML</div>
-            <div class="chip">📚 Learning New Technologies</div>
-            <div class="chip">🌐 Web Development</div>
-            <div class="chip">🔍 Problem Solving &amp; Coding</div>
-            <div class="chip">🚀 Exploring DevOps &amp; Cloud</div>
-        </div>
-    </section>
-
-    <section id="coding">
-        <div class="section-header">
-            <h2>Coding <span>Profiles</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card" style="text-align:center">
-            <p>
-                <i class='bx bxl-github'></i>
-                <strong>GitHub:</strong>
-                <a href="https://github.com/MeghanaMandla" target="_blank" rel="noopener noreferrer">github.com/MeghanaMandla</a>
+        <!-- ═══════════════════════════════ PROJECTS ══════════════════════════════ -->
+        <section class="projects" id="projects">
+            <div class="section-label" data-reveal>
+                <span class="mono">02.</span> Featured Work
+            </div>
+            <h2 class="section-title" data-reveal data-delay="100">Projects that <span class="gradient-text">ship.</span></h2>
+            <p class="section-desc" data-reveal data-delay="200">
+                A selection of work spanning AI systems, computer vision, and full-stack development.
             </p>
-            <p style="margin-top:15px">
-                <i class='bx bxl-linkedin'></i>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/meghana-mandla" target="_blank" rel="noopener noreferrer">Meghana Mandla</a>
+
+            <div class="projects-grid">
+
+                <!-- Card 1 -->
+                <div class="project-card" data-reveal data-delay="0">
+                    <div class="card-inner">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-header">
+                            <div class="card-icon layer-1">🤖</div>
+                            <a href="https://github.com/MeghanaMandla/advanced-ai-student-management-system" target="_blank" rel="noopener noreferrer" class="card-ext-link layer-3" aria-label="View project on GitHub">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-tags layer-2">
+                            <span class="tag">Python</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">ML</span>
+                        </div>
+                        <h3 class="card-title layer-2">Advanced AI Student Management System</h3>
+                        <p class="card-desc">AI-powered platform for student records, attendance tracking, performance analysis, and academic monitoring. Integrates machine learning for predictive insights.</p>
+                        <a href="https://github.com/MeghanaMandla/advanced-ai-student-management-system" target="_blank" rel="noopener noreferrer" class="card-badge layer-3">
+                            View Code <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="project-card" data-reveal data-delay="120">
+                    <div class="card-inner">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-header">
+                            <div class="card-icon layer-1">👁️</div>
+                            <a href="https://github.com/MeghanaMandla/face-expression-detection" target="_blank" rel="noopener noreferrer" class="card-ext-link layer-3" aria-label="View project on GitHub">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-tags layer-2">
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">DeepFace</span>
+                        </div>
+                        <h3 class="card-title layer-2">Face Expression Detection</h3>
+                        <p class="card-desc">Real-time emotion recognition system using OpenCV and DeepFace. Detects and classifies facial expressions from live webcam video streams with high accuracy.</p>
+                        <a href="https://github.com/MeghanaMandla/face-expression-detection" target="_blank" rel="noopener noreferrer" class="card-badge layer-3">
+                            View Code <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="project-card" data-reveal data-delay="240">
+                    <div class="card-inner">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-header">
+                            <div class="card-icon layer-1">🔐</div>
+                            <a href="https://github.com/MeghanaMandla/Secure-Persona-Prediction-and-Data-Leakage-Prevention-System" target="_blank" rel="noopener noreferrer" class="card-ext-link layer-3" aria-label="View project on GitHub">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-tags layer-2">
+                            <span class="tag">Python</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <h3 class="card-title layer-2">Secure Persona Prediction System</h3>
+                        <p class="card-desc">ML-based system for user persona prediction and clustering combined with a data leakage prevention engine. Built for security-sensitive enterprise environments.</p>
+                        <a href="https://github.com/MeghanaMandla/Secure-Persona-Prediction-and-Data-Leakage-Prevention-System" target="_blank" rel="noopener noreferrer" class="card-badge layer-3">
+                            View Code <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="project-card" data-reveal data-delay="0">
+                    <div class="card-inner">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-header">
+                            <div class="card-icon layer-1">🐳</div>
+                            <a href="https://github.com/MeghanaMandla/containerized-flask-portfolio" target="_blank" rel="noopener noreferrer" class="card-ext-link layer-3" aria-label="View project on GitHub">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-tags layer-2">
+                            <span class="tag">Flask</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">DevOps</span>
+                        </div>
+                        <h3 class="card-title layer-2">Containerized Flask Portfolio</h3>
+                        <p class="card-desc">Flask-based portfolio application fully containerized with Docker. Demonstrates modern deployment workflows and container orchestration fundamentals.</p>
+                        <a href="https://github.com/MeghanaMandla/containerized-flask-portfolio" target="_blank" rel="noopener noreferrer" class="card-badge layer-3">
+                            View Code <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="project-card" data-reveal data-delay="120">
+                    <div class="card-inner">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-header">
+                            <div class="card-icon layer-1">🏦</div>
+                            <a href="https://github.com/MeghanaMandla/ATM-Application" target="_blank" rel="noopener noreferrer" class="card-ext-link layer-3" aria-label="View project on GitHub">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-tags layer-2">
+                            <span class="tag">Python</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">CLI</span>
+                        </div>
+                        <h3 class="card-title layer-2">ATM Application</h3>
+                        <p class="card-desc">Feature-complete ATM simulation built in Python with OOP principles. Supports balance enquiry, cash withdrawal, deposits, and transaction history with PIN security.</p>
+                        <a href="https://github.com/MeghanaMandla/ATM-Application" target="_blank" rel="noopener noreferrer" class="card-badge layer-3">
+                            View Code <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="project-card" data-reveal data-delay="240">
+                    <div class="card-inner">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-header">
+                            <div class="card-icon layer-1">🖼️</div>
+                            <a href="https://github.com/MeghanaMandla/CodeAlpha_Image-gallery_Task1" target="_blank" rel="noopener noreferrer" class="card-ext-link layer-3" aria-label="View project on GitHub">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                            </a>
+                        </div>
+                        <div class="card-tags layer-2">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <h3 class="card-title layer-2">Responsive Image Gallery</h3>
+                        <p class="card-desc">A responsive, filterable image gallery application built with pure HTML, CSS, and JavaScript. Features lightbox previews and smooth transition animations.</p>
+                        <a href="https://github.com/MeghanaMandla/CodeAlpha_Image-gallery_Task1" target="_blank" rel="noopener noreferrer" class="card-badge layer-3">
+                            View Code <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="projects-footer" data-reveal>
+                <a href="https://github.com/MeghanaMandla" target="_blank" rel="noopener noreferrer" class="btn-ghost magnetic">
+                    View All Projects on GitHub
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════ SKILLS ════════════════════════════════ -->
+        <section class="skills" id="skills">
+            <div class="section-label" data-reveal>
+                <span class="mono">03.</span> Tech Stack
+            </div>
+            <h2 class="section-title" data-reveal data-delay="100">
+                Tools I <span class="gradient-text">build with.</span>
+            </h2>
+
+            <div class="marquee-outer" data-reveal data-delay="200">
+                <div class="marquee-fade-left" aria-hidden="true"></div>
+                <div class="marquee-fade-right" aria-hidden="true"></div>
+                <div class="marquee-wrapper" aria-label="Tech stack skills">
+                    <div class="marquee-track">
+                        <!-- Track A (original) -->
+                        <div class="marquee-item"><span class="skill-emoji">🐍</span>Python</div>
+                        <div class="marquee-item"><span class="skill-emoji">🗄️</span>SQL</div>
+                        <div class="marquee-item"><span class="skill-emoji">🌐</span>HTML / CSS</div>
+                        <div class="marquee-item"><span class="skill-emoji">⚡</span>JavaScript</div>
+                        <div class="marquee-item"><span class="skill-emoji">🔧</span>Git</div>
+                        <div class="marquee-item"><span class="skill-emoji">🐙</span>GitHub</div>
+                        <div class="marquee-item"><span class="skill-emoji">🐳</span>Docker</div>
+                        <div class="marquee-item"><span class="skill-emoji">☁️</span>Kubernetes</div>
+                        <div class="marquee-item"><span class="skill-emoji">🐧</span>Linux</div>
+                        <div class="marquee-item"><span class="skill-emoji">🤖</span>Machine Learning</div>
+                        <div class="marquee-item"><span class="skill-emoji">👁️</span>OpenCV</div>
+                        <div class="marquee-item"><span class="skill-emoji">🧠</span>Deep Learning</div>
+                        <div class="marquee-item"><span class="skill-emoji">🌶️</span>Flask</div>
+                        <div class="marquee-item"><span class="skill-emoji">💬</span>Prompt Engineering</div>
+                        <div class="marquee-item"><span class="skill-emoji">🛠️</span>DevOps</div>
+                        <!-- Track B (duplicate for seamless loop) -->
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🐍</span>Python</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🗄️</span>SQL</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🌐</span>HTML / CSS</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">⚡</span>JavaScript</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🔧</span>Git</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🐙</span>GitHub</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🐳</span>Docker</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">☁️</span>Kubernetes</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🐧</span>Linux</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🤖</span>Machine Learning</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">👁️</span>OpenCV</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🧠</span>Deep Learning</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🌶️</span>Flask</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">💬</span>Prompt Engineering</div>
+                        <div class="marquee-item" aria-hidden="true"><span class="skill-emoji">🛠️</span>DevOps</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill level bars -->
+            <div class="skills-grid" data-reveal data-delay="300">
+                <div class="skill-bar-item">
+                    <div class="sbi-header">
+                        <span class="sbi-name">Python</span>
+                        <span class="sbi-pct">90%</span>
+                    </div>
+                    <div class="sbi-track"><div class="sbi-fill" data-pct="90"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="sbi-header">
+                        <span class="sbi-name">Machine Learning</span>
+                        <span class="sbi-pct">75%</span>
+                    </div>
+                    <div class="sbi-track"><div class="sbi-fill" data-pct="75"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="sbi-header">
+                        <span class="sbi-name">SQL</span>
+                        <span class="sbi-pct">85%</span>
+                    </div>
+                    <div class="sbi-track"><div class="sbi-fill" data-pct="85"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="sbi-header">
+                        <span class="sbi-name">Docker</span>
+                        <span class="sbi-pct">75%</span>
+                    </div>
+                    <div class="sbi-track"><div class="sbi-fill" data-pct="75"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="sbi-header">
+                        <span class="sbi-name">HTML &amp; CSS</span>
+                        <span class="sbi-pct">85%</span>
+                    </div>
+                    <div class="sbi-track"><div class="sbi-fill" data-pct="85"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="sbi-header">
+                        <span class="sbi-name">Git &amp; GitHub</span>
+                        <span class="sbi-pct">85%</span>
+                    </div>
+                    <div class="sbi-track"><div class="sbi-fill" data-pct="85"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="sbi-header">
+                        <span class="sbi-name">Prompt Engineering</span>
+                        <span class="sbi-pct">80%</span>
+                    </div>
+                    <div class="sbi-track"><div class="sbi-fill" data-pct="80"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="sbi-header">
+                        <span class="sbi-name">Linux</span>
+                        <span class="sbi-pct">70%</span>
+                    </div>
+                    <div class="sbi-track"><div class="sbi-fill" data-pct="70"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+        <section class="contact" id="contact">
+            <div class="section-label" data-reveal>
+                <span class="mono">04.</span> Get In Touch
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-reveal>
+                    <h2 class="section-title">Let's build something<br><span class="gradient-text">great together.</span></h2>
+                    <p>
+                        I'm currently open to internship and full-time opportunities in Python development,
+                        AI/ML engineering, and DevOps. If you have a role or project in mind, let's chat.
+                    </p>
+
+                    <div class="contact-links">
+                        <a href="mailto:meghanamandla05@gmail.com" class="contact-link-item">
+                            <div class="cli-icon">✉</div>
+                            <div>
+                                <span class="cli-label">Email</span>
+                                <span class="cli-value">meghanamandla05@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/meghana-mandla" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                            <div class="cli-icon">in</div>
+                            <div>
+                                <span class="cli-label">LinkedIn</span>
+                                <span class="cli-value">meghana-mandla</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/MeghanaMandla" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                            <div class="cli-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                            </div>
+                            <div>
+                                <span class="cli-label">GitHub</span>
+                                <span class="cli-value">MeghanaMandla</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" novalidate data-reveal data-delay="150">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+                        <label for="name">Your Name</label>
+                        <span class="form-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                        <label for="email">Email Address</label>
+                        <span class="form-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
+                        <label for="subject">Subject</label>
+                        <span class="form-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message">Message</label>
+                        <span class="form-line" aria-hidden="true"></span>
+                    </div>
+                    <button type="submit" class="btn-submit magnetic" aria-label="Send message">
+                        <span class="btn-submit-text">Send Message</span>
+                        <span class="btn-submit-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        </span>
+                    </button>
+                    <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="#home" class="nav-logo footer-logo">
+                <span class="logo-bracket">{</span>MM<span class="logo-bracket">}</span>
+            </a>
+            <p class="footer-copy">
+                Designed &amp; built by <span>Meghana Mandla</span> · © 2026
+            </p>
+            <p class="footer-stack mono">
+                Made with HTML · CSS · JS
             </p>
         </div>
-    </section>
-
-    <section id="contact">
-        <div class="section-header">
-            <h2>Contact <span>Me</span></h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="card contact-card">
-            <div class="contact-item">
-                <i class='bx bx-user'></i>
-                <div><strong>Name</strong><p>Meghana Mandla</p></div>
-            </div>
-            <div class="contact-item">
-                <i class='bx bx-envelope'></i>
-                <div><strong>Email</strong><p><a href="mailto:meghanamandla05@gmail.com">meghanamandla05@gmail.com</a></p></div>
-            </div>
-            <div class="contact-item">
-                <i class='bx bxl-github'></i>
-                <div><strong>GitHub</strong><p><a href="https://github.com/MeghanaMandla" target="_blank" rel="noopener noreferrer">github.com/MeghanaMandla</a></p></div>
-            </div>
-            <div class="contact-item">
-                <i class='bx bxl-linkedin'></i>
-                <div><strong>LinkedIn</strong><p><a href="https://www.linkedin.com/in/meghana-mandla" target="_blank" rel="noopener noreferrer">linkedin.com/in/meghana-mandla</a></p></div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Designed &amp; Built by <span>Meghana Mandla</span> · © 2026</p>
     </footer>
 
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="main.js"></script>
-
 </body>
 </html>
